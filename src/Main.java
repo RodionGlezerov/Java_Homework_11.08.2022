@@ -1,0 +1,29 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Stack st1 = new Stack();
+        String str = "(([]{}))";
+        for (int i= 0; i < str.length(); i++){
+            char c = str.charAt(i);
+            if (c == '(') {
+                st1.push(c);
+            } else if (c == '[') {
+                st1.push(c);
+            } else if (c == '{') {
+                st1.push(c);
+        } else {
+                if (str.isEmpty()){
+                    System.out.println("wrong bracket string");
+                    return;
+                }
+                st1.pop();
+            }
+        }
+        if (st1.isEmpty()){
+            System.out.println("correct bracket string");
+        } else {
+            System.out.println("Wrong bracket string");
+        }
+    }
+
+}
